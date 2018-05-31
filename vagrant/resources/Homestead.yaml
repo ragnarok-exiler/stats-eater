@@ -1,21 +1,24 @@
 ---
-ip: "192.168.10.10"
-memory: 2048
+ip: "192.168.10.13"
+memory: 1024
 cpus: 1
 provider: virtualbox
 
-authorize: ~/.ssh/id_rsa.pub
+# authorize: ~/.ssh/id_rsa.pub
 
-keys:
-    - ~/.ssh/id_rsa
+# keys:
+#     - ~/.ssh/id_rsa
 
 folders:
-    - map: ~/code
+    - map: ../code
       to: /home/vagrant/code
 
 sites:
-    - map: homestead.test
-      to: /home/vagrant/code/public
+    - map: stats-api
+      to: /home/vagrant/code/api/public
+
+    - map: stats-front
+      to: /home/vagrant/code/front
 
 databases:
     - homestead
