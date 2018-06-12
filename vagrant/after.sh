@@ -12,9 +12,7 @@ sudo cp .env.example .env
 php artisan key:generate
 
 # Initialize react project in ~/code/front
-sudo npm install -g create-react-app
-create-react-app /tmp/react_vagrant
+
 cd ~/code/front
-sudo rm -rf node_modules/
-cp -R /tmp/react_vagrant/node_modules/ node_modules/
-sudo rm -rf /tmp/react_vagrant
+sudo rm -rf node_modules/ yarn.lock package-lock.json
+sudo yarn install

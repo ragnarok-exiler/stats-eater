@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('paladins', function () {
+    return ['user' => 'Mirame', 'Status' => 'Como recorto en silueta!!!!'];
+});
+
+Route::get('paladins/{id}', function ($id) {
+    return ['user' => 'Yo soy:'.$id, 'Status' => 'Quién eres tú?'];
+});
