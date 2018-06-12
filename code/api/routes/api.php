@@ -21,6 +21,8 @@ Route::get('paladins', function () {
     return ['user' => 'Mirame', 'Status' => 'Como recorto en silueta!!!!'];
 });
 
-Route::get('paladins/{id}', function ($id) {
-    return ['user' => 'Yo soy:'.$id, 'Status' => 'Quién eres tú?'];
-});
+//Route::get('paladins/{id}', function ($id) {
+//    return ['user' => 'Yo soy:'.$id, 'Status' => 'Quién eres tú?'];
+//});
+
+Route::get('paladins/{test}','Api\ApiController@test');

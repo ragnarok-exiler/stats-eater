@@ -20,6 +20,9 @@ sites:
     - map: stats-front
       to: /home/vagrant/code/front
 
+    - map: stats-frontbuild
+      to: /home/vagrant/code/front/build
+
 databases:
     - homestead
 
