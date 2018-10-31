@@ -1,9 +1,11 @@
 ---
 ip: "192.168.10.13"
-memory: 1024
+memory: 2048
 cpus: 1
 provider: virtualbox
-
+backup: true
+name: stats-eater
+hostname: stats-eater
 # authorize: ~/.ssh/id_rsa.pub
 
 # keys:
@@ -14,23 +16,18 @@ folders:
       to: /home/vagrant/code
 
 sites:
+    - map: stats-eater
+      to: /home/vagrant/code
+      php: "7.3"
     - map: stats-api
       to: /home/vagrant/code/api/public
-
+      php: "7.3"
     - map: stats-front
       to: /home/vagrant/code/front
-
-    - map: stats-frontbuild
-      to: /home/vagrant/code/front/build
+      php: "7.3"
 
 databases:
     - homestead
-
-# blackfire:
-#     - id: foo
-#       token: bar
-#       client-id: foo
-#       client-token: bar
 
 # ports:
 #     - send: 50000
@@ -38,3 +35,15 @@ databases:
 #     - send: 7777
 #       to: 777
 #       protocol: udp
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# zray:
+#  If you've already freely registered Z-Ray, you can place the token here.
+#     - email: foo@bar.com
+#       token: foo
+#  Don't forget to ensure that you have 'zray: "true"' for your site.
