@@ -3,9 +3,9 @@
 # If you would like to do some extra provisioning you may
 # add any commands you wish to this file and they will
 # be run after the Homestead machine is provisioned.
-
-
-# Initialize laravel project in  ~/code/vack
+#
+# If you have user-specific configurations you would like
+# Initialize laravel project in  ~/code/api
 cd ~/code/api
 composer install
 rm .env
